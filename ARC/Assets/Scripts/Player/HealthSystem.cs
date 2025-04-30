@@ -52,6 +52,7 @@ public class HealthSystem : MonoBehaviourPun
         // 예시: 조작 비활성화
         if (photonView.IsMine)
         {
+            PhotonNetwork.RemoveRPCs(photonView);
             GetComponent<PlayerController>().enabled = false;
         }
     }

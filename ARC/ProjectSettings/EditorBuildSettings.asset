@@ -6,7 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/LobbyTruckScene.unity
+    path: Assets/Scenes/MainMenuScene.unity
+    guid: 36a4d8e3d18279248b443a88957a07fc
+  - enabled: 1
+    path: Assets/Scenes/TruckLobbyScene.unity
     guid: f66fd41a40ac57f41ad1fd20b07bd536
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
