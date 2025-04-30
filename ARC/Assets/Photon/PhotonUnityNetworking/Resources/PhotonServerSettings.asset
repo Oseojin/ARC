@@ -39,6 +39,13 @@ MonoBehaviour:
   - DestroySpaceship
   - Fire
   - RespawnSpaceship
+  - Heal
+  - TakeDamage
+  - SetCrouchState
+  - PickUpItem
+  - RPC_DropItem
+  - RPC_PickUpItem
+  - RPC_UseTool
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

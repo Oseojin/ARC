@@ -41,7 +41,7 @@ public class PhotonManager : MonoBehaviourPunCallbacks
 
         // 룸의 속성 정의
         RoomOptions ro = new RoomOptions();
-        ro.MaxPlayers = 20;     // 최대 접속자 수
+        ro.MaxPlayers = 4;     // 최대 접속자 수
         ro.IsOpen = true;       // 룸의 오픈 여부
         ro.IsVisible = true;    // 로비에서 룸을 노출시킬지 여부
 
@@ -68,9 +68,11 @@ public class PhotonManager : MonoBehaviourPunCallbacks
         }
 
         // 출현 위치 정보를 배열에 저장
-        Transform point = GameObject.Find("SpawnPoint").GetComponent<Transform>();
+        Transform[] points = GameObject.Find("SpawnPointGroup").GetComponentsInChildren<Transform>();
+        int idx = Random.Range(1, points.Length);
 
         // 네트워크상에 캐릭터 생성
-        PhotonNetwork.Instantiate("player", point.position, point.rotation, 0);
+        PhotonNetwork.Instantiate("player", points[idx].position, points[idx].rotation, 0);
+        PhotonNetwork.Instantiate("spongetool", points[idx].position + Vector3.right, points[idx].rotation, 0);
     }
 }
